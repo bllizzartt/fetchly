@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// Import the image; make sure the path matches where you've saved the image
-import topLogo from './logo.png';
+import topLogo from './whole-foods.png';
 
 function HomePage() {
   let navigate = useNavigate();
@@ -12,18 +11,26 @@ function HomePage() {
 
   return (
     <div>
-      {/* Square banner with image and text */}
       <div className="squareBanner">
-        {/* Top center image inside the square banner */}
         <div className="topCenterLogo">
-          <img src={topLogo} alt="Whole Foods Market" />
+          <img src={topLogo} alt="Logo" />
         </div>
-        {/* Banner text */}
-        <div className="bannerText">Welcome, Let's build a list.</div>
-        {/* Search bar input */}
+        <div className="bannerText">Welcome, Let's build your cart.</div>
         <div className="searchBarContainer">
-          <input className="searchInput" placeholder="Search..." />
+          <input className="searchInput" placeholder="Search Wholefoods Inventory" />
         </div>
+      </div>
+      
+      {/* "Browse by category" text */}
+      <div className="categoryHeading">Browse by category</div>
+      
+      <div className="itemsSection">
+        {[...Array(8)].map((_, index) => (
+          <div className="item" key={index}>
+            <img src={topLogo} alt={`Item ${index + 1}`} className="itemImage" />
+            <div className="itemText">Item {index + 1}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

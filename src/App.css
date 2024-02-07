@@ -62,23 +62,34 @@ button {
     /* Adjust if necessary to better accommodate the square and other content */
     max-width: 600px; /* You might want to adjust this based on your layout needs */
     margin: auto;
+}
+
+.topCenterLogo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px; /* Add margin to bring it down */
   }
-
-/* Existing styles... */
-
+  
+  .topCenterLogo img {
+    width: 300px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
 /* Styling for the square banner */
 .squareBanner {
     width: 1370px; /* Width of the square */
     height: 368px; /* Height of the square, making it a perfect square */
-    background-color: #D9D9D9; /* Background color as specified */
+    background-color: #004D35; /* Background color as specified */
     flex-shrink: 0; /* Prevent the square from shrinking */
     margin-bottom: 20px; /* Space below the square */
     margin: 0 auto; /* Removes margin around the square, auto centers it horizontally */
     display: block; /* Ensures it's treated as a block-level element, not necessary if it's a div */
   }
   
-  .bannerText {
-    color: #353535;
+.bannerText {
+    color: #FFF;
     font-family: "SF Pro Text", Arial, sans-serif;
     font-size: 35px;
     font-style: normal;
@@ -89,10 +100,10 @@ button {
     padding-top: 200px; /* Adjust this value to move the text down */
     padding-left: 20px; /* Adjust this value to move the text right */
 
-  }
+}
   
   /* Styling for the search bar container */
-  .searchBarContainer {
+.searchBarContainer {
     display: flex;
     padding: 19px 32px;
     align-items: center;
@@ -105,7 +116,7 @@ button {
   }
   
   /* Styling for the search input field */
-  .searchInput {
+.searchInput {
     width: 100%; /* Makes the input field take up the full width of its container */
     border: none;
     outline: none;
@@ -118,4 +129,48 @@ button {
   /* Ensure the gap is removed or adjusted as it might not be needed now */
 .searchBarContainer {
     gap: 0; /* Removed the large gap as it is likely not needed with the width control */
+  }
+
+.categoryHeading {
+    color: #333;
+    font-family: "SF Pro Text", Arial, sans-serif; /* Fallback to Arial if SF Pro Text isn't available */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 100% line-height based on the font-size */
+    letter-spacing: -0.8px;
+    text-align: left; /* Center the text if desired */
+    margin: 20px 0; /* Add margin for spacing around the heading */
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 10px;
+}
+  
+.itemsSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%; /* Adjust based on your preference and the container's width */
+  margin-bottom: 20px;
+}
+
+.itemImage {
+    width: 100%; /* This ensures the image is responsive and fills the container */
+    max-width: 150px; /* New: limit the image width */
+    max-height: 100px; /* New: limit the image height, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 10px; /* Center the image and add margin below */
+  }
+  
+
+  .itemText {
+    text-align: center;
+    font-size: 14px; /* Adjust the font size as needed */
   }
