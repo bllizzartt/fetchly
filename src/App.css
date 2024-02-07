@@ -11,8 +11,9 @@ body, html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center children vertically */
+    justify-content: flex-start; /* Center children vertically */
     align-items: center; /* Center children horizontally */
+    width: 100%;
 }
 
 /* Basic styling for the pages */
@@ -49,3 +50,72 @@ button {
         font-size: 18px; /* Larger buttons for vertical touchscreen */
     }
 }
+
+/* Ensure the page container (.page) is styled appropriately */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    /* Adjust if necessary to better accommodate the square and other content */
+    max-width: 600px; /* You might want to adjust this based on your layout needs */
+    margin: auto;
+  }
+
+/* Existing styles... */
+
+/* Styling for the square banner */
+.squareBanner {
+    width: 1370px; /* Width of the square */
+    height: 368px; /* Height of the square, making it a perfect square */
+    background-color: #D9D9D9; /* Background color as specified */
+    flex-shrink: 0; /* Prevent the square from shrinking */
+    margin-bottom: 20px; /* Space below the square */
+    margin: 0 auto; /* Removes margin around the square, auto centers it horizontally */
+    display: block; /* Ensures it's treated as a block-level element, not necessary if it's a div */
+  }
+  
+  .bannerText {
+    color: #353535;
+    font-family: "SF Pro Text", Arial, sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    text-align: left;
+    margin-bottom: 20px; /* Space below the square */
+    padding-top: 200px; /* Adjust this value to move the text down */
+    padding-left: 20px; /* Adjust this value to move the text right */
+
+  }
+  
+  /* Styling for the search bar container */
+  .searchBarContainer {
+    display: flex;
+    padding: 19px 32px;
+    align-items: center;
+    justify-content: center; /* This centers the child elements horizontally */
+    border-radius: 47px;
+    background: #FFF;
+    width: 50%; /* Adjust this value to make the search bar shorter */
+    margin: 0 left; /* Centers the container within its parent */
+    margin-left: 20px; /* Shifts the container 20 pixels to the right */
+  }
+  
+  /* Styling for the search input field */
+  .searchInput {
+    width: 100%; /* Makes the input field take up the full width of its container */
+    border: none;
+    outline: none;
+    border-radius: 47px; /* Rounded corners */
+    padding: 0 15px; /* Padding inside the search field */
+    font-size: 16px; /* Adjust as needed */
+    color: #004D35; /* Text color */
+  }
+  
+  /* Ensure the gap is removed or adjusted as it might not be needed now */
+.searchBarContainer {
+    gap: 0; /* Removed the large gap as it is likely not needed with the width control */
+  }
