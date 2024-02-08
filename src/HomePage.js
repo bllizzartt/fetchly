@@ -1,13 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import topLogo from './whole-foods.png';
+import meatsImage from './meat.png';
+
 
 function HomePage() {
   let navigate = useNavigate();
 
-  const navigateToHomePage2 = () => {
-    navigate('/home2');
-  };
+  // Updated categories with image sources
+  const categoriesFirstRow = [
+    { name: 'Essentials', imageSrc: meatsImage },
+    // other categories...
+  ];
+  const categoriesSecondRow = [
+    { name: 'Category 5', imageSrc: 'path/to/category5-image.png' },
+    // other categories...
+  ];
 
   return (
     <div>
@@ -21,16 +29,22 @@ function HomePage() {
         </div>
       </div>
       
-      {/* "Browse by category" text */}
       <div className="categoryHeading">Browse by category</div>
-      
-      <div className="itemsSection">
-        {[...Array(8)].map((_, index) => (
-          <div className="item" key={index}>
-            <img src={topLogo} alt={`Item ${index + 1}`} className="itemImage" />
-            <div className="itemText">Item {index + 1}</div>
-          </div>
-        ))}
+      <div className="categoriesContainer">
+        <div className="categoryRow">
+          {categoriesFirstRow.map((category) => (
+            <div className="categoryItem" key={category.name}>
+              <img src={category.imageSrc} alt={category.name} className="categoryImage" />
+            </div>
+          ))}
+        </div>
+        <div className="categoryRow">
+          {categoriesSecondRow.map((category) => (
+            <div className="categoryItem" key={category.name}>
+              <img src={category.imageSrc} alt={category.name} className="categoryImage" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

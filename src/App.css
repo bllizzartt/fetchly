@@ -1,4 +1,4 @@
-/* App.css */
+App.css
 body, html {
     margin: 0;
     padding: 0;
@@ -98,7 +98,7 @@ button {
     text-align: left;
     margin-bottom: 20px; /* Space below the square */
     padding-top: 200px; /* Adjust this value to move the text down */
-    padding-left: 20px; /* Adjust this value to move the text right */
+    padding-left: 150px; /* Adjust this value to move the text right */
 
 }
   
@@ -112,7 +112,7 @@ button {
     background: #FFF;
     width: 50%; /* Adjust this value to make the search bar shorter */
     margin: 0 left; /* Centers the container within its parent */
-    margin-left: 20px; /* Shifts the container 20 pixels to the right */
+    margin-left: 150px; /* Shifts the container 20 pixels to the right */
   }
   
   /* Styling for the search input field */
@@ -143,34 +143,47 @@ button {
     margin: 20px 0; /* Add margin for spacing around the heading */
     margin-top: 50px;
     margin-bottom: 100px;
-    margin-left: 10px;
-}
-  
-.itemsSection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 20px;
+    margin-left: 150px;
 }
 
-.item {
+.categoryImage {
+  width: 80px; /* Adjust based on your preference */
+  height: 80px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area, can be adjusted */
+  border-radius: 40px; /* Circular images, adjust if needed */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.categoryItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 23%; /* Adjust based on your preference and the container's width */
-  margin-bottom: 20px;
+  justify-content: center;
+  background-color: #f0f0f0; /* Background color */
+  border-radius: 10px; /* Rounded corners for the box */
+  padding: 15px; /* Padding around content */
+  font-size: 16px; /* Text size */
+  text-align: center; /* Center text */
+  margin: 0 10px 20px; /* Margin around each item */
+  cursor: pointer; /* Indicates clickable */
+  width: 120px; /* Fixed width, adjust as needed */
+  height: auto; /* Height adjusts based on content */
 }
 
-.itemImage {
-    width: 100%; /* This ensures the image is responsive and fills the container */
-    max-width: 150px; /* New: limit the image width */
-    max-height: 100px; /* New: limit the image height, adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto 10px; /* Center the image and add margin below */
-  }
-  
 
-  .itemText {
-    text-align: center;
-    font-size: 14px; /* Adjust the font size as needed */
-  }
+.categoryRow {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
