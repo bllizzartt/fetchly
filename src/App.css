@@ -187,3 +187,58 @@ button {
   max-width: 600px;
   margin: 20px auto;
 }
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #004d40; /* Adjust the color to match your brand */
+  color: white;
+  font-family: 'Arial', sans-serif; /* Use your preferred font */
+}
+
+.logoContainer img {
+  max-width: 200px; /* Adjust to fit your logo's size */
+  margin-bottom: 50px;
+}
+
+.welcomeContainer h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.welcomeContainer h2 {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.buttonContainer button {
+  background-color: #00897b; /* Adjust button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.tutorialButton {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Add media queries for responsiveness if needed */

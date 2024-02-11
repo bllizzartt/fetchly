@@ -9,11 +9,17 @@ function HomePage() {
 
   // Updated categories with image sources
   const categoriesFirstRow = [
-    { name: 'Essentials', imageSrc: meatsImage },
+    { name: 'Meats', imageSrc: meatsImage },
+    { name: 'Dairy', imageSrc: meatsImage },
+    { name: 'Produce', imageSrc: meatsImage },
+    { name: 'Beverages', imageSrc: meatsImage },
     // other categories...
   ];
   const categoriesSecondRow = [
-    { name: 'Category 5', imageSrc: 'path/to/category5-image.png' },
+    { name: 'Supplements', imageSrc: meatsImage },
+    { name: 'Body Care', imageSrc: meatsImage },
+    { name: 'Pet', imageSrc: meatsImage },
+    { name: 'Household', imageSrc: meatsImage },
     // other categories...
   ];
 
@@ -35,6 +41,7 @@ function HomePage() {
           {categoriesFirstRow.map((category) => (
             <div className="categoryItem" key={category.name}>
               <img src={category.imageSrc} alt={category.name} className="categoryImage" />
+              <div>{category.name}</div>
             </div>
           ))}
         </div>
@@ -42,6 +49,7 @@ function HomePage() {
           {categoriesSecondRow.map((category) => (
             <div className="categoryItem" key={category.name}>
               <img src={category.imageSrc} alt={category.name} className="categoryImage" />
+              <div>{category.name}</div>
             </div>
           ))}
         </div>
