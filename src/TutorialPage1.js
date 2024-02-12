@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import topLogo from './white-whole-foods.png'; // Make sure the path is correct
 import './App.css'; // Make sure to import your CSS file
 
 function TutorialPage1() {
   const navigate = useNavigate(); // This hook provides the navigation function
+  
 
   const handlePickUp = () => {
     console.log('Pick Up option selected');
@@ -17,14 +19,14 @@ function TutorialPage1() {
 
   const startTutorial = () => {
     console.log('Tutorial started');
+    navigate('/tutorial2'); // Assuming you have a TutorialPage3 for the next part of the tutorial
     // Add your navigation logic here for starting the tutorial if needed
   };
 
   return (
     <div className="welcomeContainer">
       <div className="logoContainer">
-        {/* Assuming you have the logo saved locally */}
-        <img src="/path-to-your-logo.png" alt="Whole Foods Market" />
+        <img src={topLogo} alt="Whole Foods Market" />
       </div>
       <h1>Welcome!</h1>
       <h2>Select one to get started</h2>

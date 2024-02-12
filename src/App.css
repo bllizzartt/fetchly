@@ -164,7 +164,7 @@ button {
   padding: 15px; /* Padding around content */
   font-size: 16px; /* Text size */
   text-align: center; /* Center text */
-  margin: 0 10px 20px; /* Margin around each item */
+  margin: 50px; /* Margin around each item */
   cursor: pointer; /* Indicates clickable */
   width: 120px; /* Fixed width, adjust as needed */
   height: auto; /* Height adjusts based on content */
@@ -175,6 +175,7 @@ button {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  color: rgb(0, 0, 0);
   margin: 10px 0;
 }
 
@@ -188,20 +189,42 @@ button {
   margin: 20px auto;
 }
 
+.welcomeContainer h1 {
+  font-size: 2em;
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width to allow alignment */
+  margin-left: 150px; /* Adjust this value to align your text as needed */
+  margin-bottom: 10px;
+}
+
+/* code for TutorialPage1.js */
 .welcomeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   justify-content: center;
-  height: 100vh;
-  background-color: #004d40; /* Adjust the color to match your brand */
+  min-height: 100vh; /* Use min-height to ensure it covers the viewport, but can expand if content is larger */
+  width: 100vw; /* This ensures it covers the full width of the viewport */
+  background-color: #004d40; /* The green background color */
   color: white;
   font-family: 'Arial', sans-serif; /* Use your preferred font */
+  box-sizing: border-box; /* This ensures that padding and borders are included in the total width and height */
 }
 
+.logoContainer {
+  position: absolute; /* Position the logo absolutely */
+  top: 0; /* Align the top of the logoContainer with the top of the welcomeContainer */
+  left: 50%; /* Center the logoContainer horizontally */
+  transform: translateX(-50%); /* Offset the logoContainer by half its width to truly center it */
+  width: 100%; /* Ensure the container spans the full width */
+  display: flex; /* Use flex to center the image within the container */
+  justify-content: center; /* Center horizontally within the logoContainer */
+}
 .logoContainer img {
   max-width: 200px; /* Adjust to fit your logo's size */
-  margin-bottom: 50px;
+  margin-top: 10px; /* Add some space from the top */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .welcomeContainer h1 {
@@ -216,7 +239,9 @@ button {
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Change this from column to row */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically (if there's height available) */
   margin-bottom: 30px;
 }
 
@@ -226,10 +251,11 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px; /* This adds space between the buttons */
   cursor: pointer;
   font-size: 1em;
 }
+
 
 .tutorialButton {
   background-color: transparent;
