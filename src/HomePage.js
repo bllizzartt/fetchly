@@ -11,7 +11,7 @@ import pet from './pet.png';
 import household from './household.png';
 import vector from './vector.png';
 import trvector from './trvector.png';
-
+import slide1 from './slide1.png'
 
 
 function HomePage() {
@@ -41,6 +41,13 @@ function HomePage() {
     // other categories...
   ];
 
+  const menuItems = [
+    { text: 'Current List', imgSrc: slide1 },
+    { text: 'Pickup Orders', imgSrc: slide1 },
+    { text: 'Call Attendant', imgSrc: slide1 },
+  ];
+
+
   return (
     <div>
       <div className="squareBanner">
@@ -58,11 +65,24 @@ function HomePage() {
       </div>
       
        {/* Slide-out menu */}
-       <div className={`slideOutMenu ${isMenuOpen ? 'open' : ''}`}>
-        {/* Menu content goes here */}
-        <button onClick={() => setIsMenuOpen(false)}>Close Menu</button>
-        {/* You can add menu items here */}
+      <div className={`slideOutMenu ${isMenuOpen ? 'open' : ''}`}>
+        <button onClick={() => setIsMenuOpen(false)} className="menuBackButton">Back</button>
+        <div className="menuTitle">Menu</div>
+        {/* Add the rest of your menu items here */}
+
+        {/* Menu item with image and text */}
+        {/* Dynamically create a menu item for each item in the array */}
+        {menuItems.map((item, index) => (
+          <div className="menuItem" key={index}>
+            <button className="menuItem" key={index} onClick={() => {/* handle menu item click */}}>
+            <img src={item.imgSrc} alt={item.name} className="menuItemImage" />
+            <div className="menuItemText">{item.text}</div>
+            </button>
+          </div>
+        ))}
       </div>
+
+    
 
       <div className="categoryHeading">Browse by category</div>
       <div className="categoriesContainer">

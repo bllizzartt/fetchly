@@ -298,8 +298,8 @@ button {
 .slideOutMenu {
   position: fixed;
   top: 0;
-  right: -250px; /* Start off the screen */
-  width: 250px; /* Set the width of the slide-out menu */
+  right: -600px; /* Start off the screen */
+  width: 600px; /* Set the width of the slide-out menu */
   height: 100%;
   background: #FFF;
   transition: right 0.3s ease-in-out;
@@ -310,5 +310,72 @@ button {
 .slideOutMenu.open {
   right: 0; /* Bring the menu on screen */
 }
+
+/* Additional styling for the back button and title in the slide-out menu */
+.menuBackButton {
+  /* Style your back button here, if needed */
+  display: block; /* Ensure the button is block-level for proper spacing */
+  margin: 0; /* Adjust as needed */
+  padding: 10px 20px; /* Adjust as needed */
+  font-size: 16px; /* Adjust as needed */
+  text-align: left; /* Align text to the left side of the button */
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.menuTitle {
+  display: block; /* Ensure the title is block-level for proper spacing */
+  margin-top: 10px; /* Space after the button */
+  padding: 10px 20px; /* Adjust as needed */
+  font-size: 20px; /* Adjust as needed */
+  font-weight: bold; /* Make it bold */
+  text-align: left; /* Align text to the left side of the title */
+  margin-left: 15px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between image and text */
+  width: 100%; /* Adjust this width as needed */
+  padding: 10px 30px; /* Padding inside the menu item */
+  border: 2px solid #EDEDED; /* Border around the menu item */
+  background: #F7F7F7; /* Background color of the menu item */
+  margin-bottom: 20px; /* Space below the menu item */
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px; /* Optional border-radius */
+  box-sizing: border-box;
+  /* Remove default button styles */
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Add any additional hover effect you want for buttons */
+.menuItem:hover {
+  background-color: #ececec; /* Example hover effect */
+}
+
+.menuItemImage {
+  width: 48px; /* Example width, adjust as needed */
+  height: 48px; /* Example height, adjust as needed */
+  /* You may want to set 'object-fit' if your images are not square */
+}
+
+.menuItemText {
+  font-size: 18px; /* Example font size, adjust as needed */
+  /* Add any additional text styling here */
+}
+
+/* Style for the menu header */
+.menuHeader {
+  /* Your existing styles for the menu header... */
+  padding-left: 30px; /* Align with the text of the menuItem */
+}
+
 
 /* Add media queries for responsiveness if needed */
