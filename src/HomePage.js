@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import topLogo from './white-whole-foods.png';
-import pantry from './pantry.png';
-import meats from './meats.png';
-import produce from './produce.png';
-import beverages from './beverages.png';
-import supplements from './supplements.png';
-import body from './body.png';
-import pet from './pet.png';
-import household from './household.png';
-import vector from './vector.png';
-import trvector from './trvector.png';
-import slide1 from './slide1.png'
+import topLogo from './images/white-whole-foods.png';
+import pantry from './images/pantry.png';
+import meats from './images/meats.png';
+import produce from './images/produce.png';
+import beverages from './images/beverages.png';
+import supplements from './images/supplements.png';
+import body from './images/body.png';
+import pet from './images/pet.png';
+import household from './images/household.png';
+import vector from './images/vector.png';
+import trvector from './images/trvector.png';
+import slide1 from './images/slide1.png'
+import logout from './images/logout.png'
+import page from './images/logout.png'
 
 
 function HomePage() {
@@ -42,8 +44,8 @@ function HomePage() {
   ];
 
   const menuItems = [
-    { text: 'Current List', imgSrc: slide1 },
-    { text: 'Pickup Orders', imgSrc: slide1 },
+    { text: 'Current List', imgSrc: slide1, path: '/home2' },
+    { text: 'Pickup Orders', imgSrc: slide1, path:'/home3' },
     { text: 'Call Attendant', imgSrc: slide1 },
   ];
 
@@ -64,9 +66,10 @@ function HomePage() {
         </div>
       </div>
       
+
        {/* Slide-out menu */}
       <div className={`slideOutMenu ${isMenuOpen ? 'open' : ''}`}>
-        <button onClick={() => setIsMenuOpen(false)} className="menuBackButton">Back</button>
+        <button onClick={() => setIsMenuOpen(false)}  className="menuBackButton">Back</button>
         <div className="menuTitle">Menu</div>
         {/* Add the rest of your menu items here */}
 
@@ -74,12 +77,21 @@ function HomePage() {
         {/* Dynamically create a menu item for each item in the array */}
         {menuItems.map((item, index) => (
           <div className="menuItem" key={index}>
-            <button className="menuItem" key={index} onClick={() => {/* handle menu item click */}}>
-            <img src={item.imgSrc} alt={item.name} className="menuItemImage" />
-            <div className="menuItemText">{item.text}</div>
+            <button className="menuItemButton" onClick={() => navigate(item.path)} >
+              <img src={item.imgSrc} alt={item.text} className="menuItemImage" />
+              <div className="menuItemText">{item.text}</div>
             </button>
           </div>
         ))}
+        <button className="loginButton" onClick={(e) => {
+          e.stopPropagation(); // Prevent triggering the menuItemButton's onClick
+          // Handle login click
+        }}>
+          <div className="loginSection">
+            <img src={logout} alt="Log in" className="loginIcon" />
+            <div className="menuItemLoginText">Log in</div>
+          </div>
+        </button>
       </div>
 
     

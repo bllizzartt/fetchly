@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
-import topLogo from './white-whole-foods.png'; // Make sure the path is correct
-import meatsImage from './meat.png';
+import topLogo from './images/white-whole-foods.png'; // Make sure the path is correct
+import meatsImage from './images/meat.png';
 
 function TutorialPage2() {
   const navigate = useNavigate();

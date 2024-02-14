@@ -377,5 +377,80 @@ button {
   padding-left: 30px; /* Align with the text of the menuItem */
 }
 
+.menuItemLoginText {
+  color: #333;
+  font-family: "SF Pro Text", sans-serif; /* Added fallback font */
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* Equivalent to the font size */
+  letter-spacing: -0.7px;
+  margin-left: 10px;
+}
 
+.menuItemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Align items to the start of the container */
+}
+
+.loginSection {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-left: 20px;
+}
+
+.loginIcon {
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+  /* Add more styling as needed */
+}
 /* Add media queries for responsiveness if needed */
+.loginButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0; /* Adjust or remove padding as needed */
+  margin: 0; /* Adjust or remove margin as needed */
+  margin-top: 50px;
+}
+
+.menuBackButton {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center the items vertically */
+  justify-content: center; /* Center the content horizontally, if needed */
+  cursor: pointer;
+  border: none;
+  background: none; /* Adjust button styling as needed */
+}
+
+.backArrowIcon {
+  margin-right: 8px; /* Add space between the arrow icon and the text */
+  width: 20px; /* Adjust based on the size of your icon */
+  height: 20px; /* Adjust based on the size of your icon */
+  /* Add additional styling as needed */
+}
+
+.menuItemButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  text-align: left; /* Ensures the text aligns to the left */
+}
+
+.menuItemImage, .menuItemLoginText {
+  margin-right: 10px; /* Adjust spacing between image and text */
+}
+
+/* Removes borders explicitly if needed */
+.menuItem, .menuItemButton, .loginButton {
+  border: none;
+  box-shadow: none; /* In case there's a box-shadow mimicking a border */
+}

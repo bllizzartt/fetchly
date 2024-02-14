@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import topLogo from './white-whole-foods.png'; // Make sure the path is correct
+import topLogo from './images/white-whole-foods.png'; // Make sure the path is correct
 import './App.css'; // Make sure to import your CSS file
 
 function TutorialPage1() {
