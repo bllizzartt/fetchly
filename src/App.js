@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { MenuProvider } from './MenuContext'; // Adjust the import path as necessary
 import TutorialPage1 from './TutorialPage1'; // Import your TutorialPage1 component
 import TutorialPage2 from './TutorialPage2';
 import TutorialPage3 from './TutorialPage3';
@@ -16,16 +17,18 @@ import OpenAi from './OpenAi';
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<TutorialPage1 />} /> {/* Make TutorialPage1 the root path */}
-        <Route path="/tutorial2" element={<TutorialPage2 />} />
-        <Route path="/tutorial3" element={<TutorialPage3 />} />
-        <Route path="/tutorial4" element={<TutorialPage4 />} />
-        <Route path="/home" element={<HomePage />} /> {/* Changed from "/" to "/home" */}
-        <Route path="/home2" element={<HomePage2 />} />
-        <Route path="/home3" element={<HomePage3 />} />
-        <Route path="/openai" element={<OpenAi />} />
-      </Routes>
+      <MenuProvider>
+        <Routes>
+          <Route path="/" element={<TutorialPage1 />} /> {/* Make TutorialPage1 the root path */}
+          <Route path="/tutorial2" element={<TutorialPage2 />} />
+          <Route path="/tutorial3" element={<TutorialPage3 />} />
+          <Route path="/tutorial4" element={<TutorialPage4 />} />
+          <Route path="/home" element={<HomePage />} /> {/* Changed from "/" to "/home" */}
+          <Route path="/home2" element={<HomePage2 />} />
+          <Route path="/home3" element={<HomePage3 />} />
+          <Route path="/openai" element={<OpenAi />} />
+        </Routes>
+      </MenuProvider>
     </Router>
   );
 }

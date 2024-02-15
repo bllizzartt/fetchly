@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useMenu } from './MenuContext'; // Adjust the import path as necessary
 import topLogo from './images/white-whole-foods.png';
 import pantry from './images/pantry.png';
 import meats from './images/meats.png';
@@ -18,7 +19,7 @@ import page from './images/logout.png'
 
 function HomePage() {
   let navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {isMenuOpen, setIsMenuOpen} = useMenu();
 
 
   const handleTrvectorClick = () => {
