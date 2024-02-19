@@ -218,7 +218,7 @@ button {
 
 .welcomeContainer h1 {
   font-size: 2em;
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Align text to the left */
   width: 100%; /* Full width to allow alignment */
   margin-left: 150px; /* Adjust this value to align your text as needed */
   margin-bottom: 10px;
@@ -288,7 +288,7 @@ button {
   background-color: transparent;
   border: 1px solid white;
   color: white;
-  border-radius: 5px;
+  border-radius: 31px;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 1em;

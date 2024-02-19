@@ -60,7 +60,7 @@ function HomePage() {
         <div className="topCenterLogo">
           <img src={topLogo} alt="Logo" />
         </div>
-        <div className="bannerText">Welcome, Let's build your cart.</div>
+        <div className="bannerText">Welcome, Let's build your list.</div>
         <div className="searchBarContainer">
           <input className="searchInput" placeholder="Search Wholefoods Inventory" />
           <img src={vector} alt="Search Icon" className="searchIcon" />
