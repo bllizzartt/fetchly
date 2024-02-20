@@ -74,25 +74,7 @@ function HomePage() {
         <div className="menuTitle">Menu</div>
         {/* Add the rest of your menu items here */}
 
-        {/* Menu item with image and text */}
-        {/* Dynamically create a menu item for each item in the array */}
-        {menuItems.map((item, index) => (
-          <div className="menuItem" key={index}>
-            <button className="menuItemButton" onClick={() => navigate(item.path)} >
-              <img src={item.imgSrc} alt={item.text} className="menuItemImage" />
-              <div className="menuItemText">{item.text}</div>
-            </button>
-          </div>
-        ))}
-        <button className="loginButton" onClick={(e) => {
-          e.stopPropagation(); // Prevent triggering the menuItemButton's onClick
-          // Handle login click
-        }}>
-          <div className="loginSection">
-            <img src={logout} alt="Log in" className="loginIcon" />
-            <div className="menuItemLoginText">Log in</div>
-          </div>
-        </button>
+      
       </div>
 
     

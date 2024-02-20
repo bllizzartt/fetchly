@@ -79,6 +79,7 @@ button {
   
 /* Styling for the square banner */
 .squareBanner {
+  position: relative;
     width: 1370px; /* Width of the square */
     height: 368px; /* Height of the square, making it a perfect square */
     background-color: #004D35; /* Background color as specified */
@@ -135,9 +136,9 @@ button {
 }
 
 .burgerIcon {
-  position: absolute;
+  position: relative;
   right: 30px;
-  top: 30px;
+  top: 20px;
   width: 30px; /* Example width */
   height: 25px; /* Example height, adjust both width and height as needed */
   cursor: pointer;
