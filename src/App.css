@@ -283,6 +283,66 @@ button {
   cursor: pointer;
   font-size: 1em;
 }
+/* Start with Meals Section */
+.startWithMeals {
+  width: 100%; /* Adjust as needed for your layout */
+  overflow: hidden; /* Hide overflow */
+  margin: 20px 0; /* Space above and below the section */
+  padding: 0 15px; /* Padding on sides if needed */
+}
+
+/* Meal Items within SwipeableViews */
+.mealItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%; /* Ensure each item can fit the swipeable area */
+}
+
+.mealImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* Adjustments to meal items spacing */
+.mealItemWrapper {
+  padding: 0 10px; /* Horizontal padding for each meal item */
+}
+
+/* Ensure the swipeable views container allows for snug fit of items */
+.swipeableViewsContainer {
+  display: flex; /* Use flexbox for direct children, which are the swipeable views */
+  gap: 20px; /* Space between each swipeable view */
+}
+
+/* Additional styles for swipeable views */
+.swipeableViewsContainer > div {
+  flex-shrink: 0; /* Prevent the swipeable views from shrinking */
+  width: calc(100% - 40px); /* Adjust width as needed, accounting for padding */
+}
+
+/* Ensure the category items and meal items are consistently styled */
+.categoryItem, .mealItem {
+  margin: 15px; /* Consistent margin for spacing */
+  width: 200px; /* Or any specific width according to your design */
+}
+
+/* Update existing styles if necessary to ensure consistency */
+.categoryRow, .mealItemWrapper {
+  justify-content: center; /* Center items horizontally if flex-direction is row */
+  flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+
+
 
 
 .tutorialButton {

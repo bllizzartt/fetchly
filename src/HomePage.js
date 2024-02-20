@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMenu } from './MenuContext'; // Adjust the import path as necessary
+import { MenuContext } from './MenuContext';
+import SwipeableViews from 'react-swipeable-views';
 import topLogo from './images/white-whole-foods.png';
 import pantry from './images/pantry.png';
 import meats from './images/meats.png';
@@ -20,6 +22,7 @@ import page from './images/logout.png'
 function HomePage() {
   let navigate = useNavigate();
   const {isMenuOpen, setIsMenuOpen} = useMenu();
+
 
 
   const handleTrvectorClick = () => {
@@ -50,6 +53,17 @@ function HomePage() {
     { text: 'Call Attendant', imgSrc: slide1 },
   ];
 
+  // Example meals data structure
+  const meals = [
+    { name: 'Chicken Fried Rice Bowl', imageSrc: slide1 },
+    { name: 'Classic Steak and Fries', imageSrc: slide1 },
+    { name: 'Katsu Ramen w/ Egg Miso Base', imageSrc: slide1 },
+    { name: 'Burger', imageSrc: slide1 },
+    { name: 'Lasagna', imageSrc: slide1 },
+    { name: 'chicken burrito', imageSrc: slide1 },
+    // Add more meals as needed
+  ];
+
 
   return (
     <div>
@@ -73,11 +87,20 @@ function HomePage() {
         <button onClick={() => setIsMenuOpen(false)}  className="menuBackButton">Back</button>
         <div className="menuTitle">Menu</div>
         {/* Add the rest of your menu items here */}
-
-      
       </div>
 
-    
+       {/* Swipeable Start with Meals Section */}
+       <section className="startWithMeals">
+        <h2>Start with Meals</h2>
+        <SwipeableViews enableMouseEvents>
+          {meals.map((meal, index) => (
+            <div key={index} className="mealItem">
+              <img src={meal.imageSrc} alt={meal.name} className="mealImage" />
+              <div>{meal.name}</div>
+            </div>
+          ))}
+        </SwipeableViews>
+      </section>
 
       <div className="categoryHeading">Browse by category</div>
       <div className="categoriesContainer">
