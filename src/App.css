@@ -452,7 +452,7 @@ button {
 .menuItemContent {
   display: flex;
   flex-direction: column;
-  align-items: start; /* Align items to the start of the container */
+  align-items: flex-start; /* Align items to the start of the container */
 }
 
 .loginSection {
